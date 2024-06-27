@@ -17,7 +17,10 @@ class ServiciosController extends Controller
         //$servicios=Servicio::latest('titulo')->get();
 
         //Metodo orderBy ordena la tabla en una determinada forma por un determinado campo.
-        $servicios=Servicio::orderBy('titulo','asc')->get();
+        //$servicios=Servicio::orderBy('titulo','asc')->get();
+        
+        //Metodo paginate divide en paginas una determinada cantidad de elementos que se deben mostrar.
+        $servicios=Servicio::latest('titulo')->paginate(2);
 
         return view('servicios',compact('servicios'));
     }

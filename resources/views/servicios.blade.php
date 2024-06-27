@@ -13,5 +13,8 @@
         @else
             <li>No existe ningun servicio que mostrar</li>
         @endif
-    </ul>
+    </tr>
+    <tr>
+        <td colspan="4">{{$servicios->links('pagination::bootstrap-4')}}</td>
+    </tr>
 @endsection
