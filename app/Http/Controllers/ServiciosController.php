@@ -13,7 +13,11 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        $servicios=Servicio::get();
+        //Metodo latest ordena la tabla en forma descendente por un determinado campo.
+        //$servicios=Servicio::latest('titulo')->get();
+
+        //Metodo orderBy ordena la tabla en una determinada forma por un determinado campo.
+        $servicios=Servicio::orderBy('titulo','asc')->get();
 
         return view('servicios',compact('servicios'));
     }
