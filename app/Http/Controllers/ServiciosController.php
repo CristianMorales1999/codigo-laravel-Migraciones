@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Servicio;
 
 class ServiciosController extends Controller
 {
@@ -12,7 +13,7 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        $servicios=DB::table('servicios')->get();
+        $servicios=Servicio::get();
 
         return view('servicios',compact('servicios'));
     }
