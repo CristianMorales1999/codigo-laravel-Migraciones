@@ -5,10 +5,10 @@
 @section('content')
     <h2>Servicios</h2>
 
-    <ul>
+    <tr>
         @if($servicios)
             @foreach($servicios as $item)
-                <li>{{$item['titulo']}}</li>
+                <td>{{$item->titulo}}<br>{{$item->descripcion}}</td>
             @endforeach
         @else
             <li>No existe ningun servicio que mostrar</li>

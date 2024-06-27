@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ServiciosController extends Controller
 {
@@ -11,13 +12,7 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        $servicios=[
-            ['titulo'=>'Servicio 01'],
-            ['titulo'=>'Servicio 02'],
-            ['titulo'=>'Servicio 03'],
-            ['titulo'=>'Servicio 04'],
-            ['titulo'=>'Servicio 05']
-        ];
+        $servicios=DB::table('servicios')->get();
 
         return view('servicios',compact('servicios'));
     }
