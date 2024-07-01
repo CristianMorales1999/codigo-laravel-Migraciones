@@ -9,7 +9,7 @@
 
     <style>
         th{
-            background-color: rgb(1,0,140);
+            background-color: rgb(1,0,140);/**#007BFF;*/
             text-align: center;
         }
         a{
@@ -21,6 +21,10 @@
         }
         .activo{
             background-color: black;
+        }
+        .servicios{
+            background-color: rgb(1,0,140);/**#007BFF;*/
+            text-align: center;
         }
     </style>
 
