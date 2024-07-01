@@ -47,6 +47,7 @@ class ServiciosController extends Controller
     public function show(string $id)
     {
         //
+        return Servicio::find($id);
     }
 
     /**
